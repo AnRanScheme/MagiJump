@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXA-dw-lkA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARKit🌰-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxA-BT-chq">
+                                <rect key="frame" x="164.5" y="186" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="hFj-lV-ksZ" kind="push" id="ixX-nI-oWQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-DN-MlC">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Vqh-x7-7q2" kind="push" id="LUZ-eG-tPp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrD-O8-9Jv">
+                                <rect key="frame" x="164.5" y="439" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="gej-m2-9t2" kind="push" id="OKZ-U8-kl7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lxA-BT-chq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6LP-4l-OL0"/>
+                            <constraint firstItem="BrD-O8-9Jv" firstAttribute="top" secondItem="2nR-DN-MlC" secondAttribute="bottom" constant="90.5" id="E7U-Ci-yse"/>
+                            <constraint firstItem="2nR-DN-MlC" firstAttribute="top" secondItem="lxA-BT-chq" secondAttribute="bottom" constant="102.5" id="RN2-Vl-jZY"/>
+                            <constraint firstItem="2nR-DN-MlC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY6-Lf-xdn"/>
+                            <constraint firstItem="BrD-O8-9Jv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqL-rc-vAT"/>
+                            <constraint firstItem="2nR-DN-MlC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pib-Wn-udi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ARKit🌰" id="Gle-r2-1R3">
+                        <barButtonItem key="rightBarButtonItem" title="jump" id="7pX-j2-YQd">
+                            <connections>
+                                <segue destination="Bnl-0P-pQT" kind="push" id="GLh-Ef-MJj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="-548"/>
+        </scene>
+        <!--Jump View Controller-->
+        <scene sceneID="lMI-QC-uhM">
+            <objects>
+                <viewController id="Bnl-0P-pQT" customClass="JumpViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrA-l5-dJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hoH-wc-Kc7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vkr-Jf-rBl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kC5-rJ-RZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-1800"/>
+        </scene>
+        <!--Cube View Controller-->
+        <scene sceneID="PW6-cR-xnF">
+            <objects>
+                <viewController storyboardIdentifier="CubeViewController" id="hFj-lV-ksZ" customClass="CubeViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sfj-G4-dRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-L9-Wor">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L86-kk-RhB" firstAttribute="trailing" secondItem="ntW-L9-Wor" secondAttribute="trailing" id="Duf-Hk-En6"/>
+                            <constraint firstItem="L86-kk-RhB" firstAttribute="bottom" secondItem="ntW-L9-Wor" secondAttribute="bottom" id="E8S-Ii-QgD"/>
+                            <constraint firstItem="ntW-L9-Wor" firstAttribute="top" secondItem="L86-kk-RhB" secondAttribute="top" id="SKN-4h-S0b"/>
+                            <constraint firstItem="ntW-L9-Wor" firstAttribute="leading" secondItem="L86-kk-RhB" secondAttribute="leading" id="eOa-MD-CoN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L86-kk-RhB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qrh-MM-RUW"/>
+                    <connections>
+                        <outlet property="screenView" destination="ntW-L9-Wor" id="rId-iN-SU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwj-v2-Fu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="-1076"/>
+        </scene>
+        <!--Plane View Controller-->
+        <scene sceneID="Zgi-NM-F3V">
+            <objects>
+                <viewController id="Vqh-x7-7q2" customClass="PlaneViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLO-Lt-KMz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-5a-o72">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xsk-5a-o72" firstAttribute="leading" secondItem="a8z-KZ-Lty" secondAttribute="leading" id="5QZ-6Q-qCZ"/>
+                            <constraint firstItem="a8z-KZ-Lty" firstAttribute="trailing" secondItem="xsk-5a-o72" secondAttribute="trailing" id="5dM-Hc-GmQ"/>
+                            <constraint firstItem="xsk-5a-o72" firstAttribute="top" secondItem="a8z-KZ-Lty" secondAttribute="top" id="7V2-5V-Muh"/>
+                            <constraint firstItem="a8z-KZ-Lty" firstAttribute="bottom" secondItem="xsk-5a-o72" secondAttribute="bottom" id="hLW-FW-xgM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a8z-KZ-Lty"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vHF-Yp-Toi"/>
+                    <connections>
+                        <outlet property="sceneView" destination="xsk-5a-o72" id="yaa-0A-yki"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJt-am-fId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="-351"/>
+        </scene>
+        <!--Drop Plane View Controller-->
+        <scene sceneID="OpG-Nf-Z03">
+            <objects>
+                <viewController id="gej-m2-9t2" customClass="DropPlaneViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4FI-cP-rXw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7D-0w-eX7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1oi-XF-czu" firstAttribute="trailing" secondItem="P7D-0w-eX7" secondAttribute="trailing" id="6ZI-Lc-vnI"/>
+                            <constraint firstItem="P7D-0w-eX7" firstAttribute="top" secondItem="1oi-XF-czu" secondAttribute="top" id="X5W-uS-Dwb"/>
+                            <constraint firstItem="1oi-XF-czu" firstAttribute="bottom" secondItem="P7D-0w-eX7" secondAttribute="bottom" id="Z8p-M5-0L9"/>
+                            <constraint firstItem="P7D-0w-eX7" firstAttribute="leading" secondItem="1oi-XF-czu" secondAttribute="leading" id="vrV-Ko-EW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1oi-XF-czu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kOR-RQ-nqC"/>
+                    <connections>
+                        <outlet property="sceneView" destination="P7D-0w-eX7" id="cBF-wk-xN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CH9-Th-bfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dLz-3V-Zla">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SXA-dw-lkA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="At3-gu-tJg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8eB-CE-UyU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jA6-4s-X6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="-548"/>
+        </scene>
+    </scenes>
+</document>
