@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		FA010CEC2123B32800379B5A /* DropPlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CEB2123B32800379B5A /* DropPlaneViewController.swift */; };
 		FA010CEE2123B35800379B5A /* DropPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CED2123B35800379B5A /* DropPlane.swift */; };
+		FA010CF12123FF3200379B5A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CF02123FF3200379B5A /* UIColor+Extension.swift */; };
+		FA010CF32123FF6000379B5A /* SCNNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CF22123FF6000379B5A /* SCNNode+Extension.swift */; };
+		FA010CF52123FFB700379B5A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CF42123FFB700379B5A /* UIViewController+Extension.swift */; };
+		FA010CF72123FFEC00379B5A /* SCNVector3+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CF62123FFEC00379B5A /* SCNVector3+Extension.swift */; };
+		FA010CF9212400B200379B5A /* JumpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CF8212400B200379B5A /* JumpHelper.swift */; };
+		FA010CFB212400F700379B5A /* BottleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CFA212400F700379B5A /* BottleNode.swift */; };
+		FA010CFD2124012900379B5A /* BubbleTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CFC2124012900379B5A /* BubbleTextNode.swift */; };
+		FA010CFF2124085800379B5A /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA010CFE2124085800379B5A /* ModelViewController.swift */; };
+		FA010D012124087700379B5A /* SceneKit Asset.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA010D002124087700379B5A /* SceneKit Asset.scnassets */; };
 		FAA3BFAE212174E300C82A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3BFAD212174E300C82A37 /* AppDelegate.swift */; };
 		FAA3BFB0212174E300C82A37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3BFAF212174E300C82A37 /* ViewController.swift */; };
 		FAA3BFB3212174E300C82A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3BFB1212174E300C82A37 /* Main.storyboard */; };
@@ -23,6 +32,15 @@
 /* Begin PBXFileReference section */
 		FA010CEB2123B32800379B5A /* DropPlaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPlaneViewController.swift; sourceTree = "<group>"; };
 		FA010CED2123B35800379B5A /* DropPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPlane.swift; sourceTree = "<group>"; };
+		FA010CF02123FF3200379B5A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FA010CF22123FF6000379B5A /* SCNNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extension.swift"; sourceTree = "<group>"; };
+		FA010CF42123FFB700379B5A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA010CF62123FFEC00379B5A /* SCNVector3+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extension.swift"; sourceTree = "<group>"; };
+		FA010CF8212400B200379B5A /* JumpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpHelper.swift; sourceTree = "<group>"; };
+		FA010CFA212400F700379B5A /* BottleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleNode.swift; sourceTree = "<group>"; };
+		FA010CFC2124012900379B5A /* BubbleTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTextNode.swift; sourceTree = "<group>"; };
+		FA010CFE2124085800379B5A /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		FA010D002124087700379B5A /* SceneKit Asset.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "SceneKit Asset.scnassets"; sourceTree = "<group>"; };
 		FAA3BFAA212174E300C82A37 /* MagiJump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagiJump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3BFAD212174E300C82A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA3BFAF212174E300C82A37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA010CEF2123FED900379B5A /* Jump */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3BFBF2121770D00C82A37 /* JumpViewController.swift */,
+				FA010CF8212400B200379B5A /* JumpHelper.swift */,
+				FA010CFA212400F700379B5A /* BottleNode.swift */,
+				FA010CFC2124012900379B5A /* BubbleTextNode.swift */,
+				FA010CF02123FF3200379B5A /* UIColor+Extension.swift */,
+				FA010CF22123FF6000379B5A /* SCNNode+Extension.swift */,
+				FA010CF42123FFB700379B5A /* UIViewController+Extension.swift */,
+				FA010CF62123FFEC00379B5A /* SCNVector3+Extension.swift */,
+			);
+			path = Jump;
+			sourceTree = "<group>";
+		};
 		FAA3BFA1212174E300C82A37 = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +99,18 @@
 		FAA3BFAC212174E300C82A37 /* MagiJump */ = {
 			isa = PBXGroup;
 			children = (
+				FA010CEF2123FED900379B5A /* Jump */,
 				FAA3BFAD212174E300C82A37 /* AppDelegate.swift */,
 				FAA3BFAF212174E300C82A37 /* ViewController.swift */,
-				FAA3BFBF2121770D00C82A37 /* JumpViewController.swift */,
 				FAC43175212263C7006878B9 /* CubeViewController.swift */,
 				FAC70BBD212278A90066B3B9 /* PlaneViewController.swift */,
-				FA010CEB2123B32800379B5A /* DropPlaneViewController.swift */,
 				FAC70BBF2122797A0066B3B9 /* Plane.swift */,
+				FA010CEB2123B32800379B5A /* DropPlaneViewController.swift */,
 				FA010CED2123B35800379B5A /* DropPlane.swift */,
+				FA010CFE2124085800379B5A /* ModelViewController.swift */,
 				FAA3BFB1212174E300C82A37 /* Main.storyboard */,
 				FAA3BFB4212174E500C82A37 /* Assets.xcassets */,
+				FA010D002124087700379B5A /* SceneKit Asset.scnassets */,
 				FAA3BFB6212174E500C82A37 /* LaunchScreen.storyboard */,
 				FAA3BFB9212174E500C82A37 /* Info.plist */,
 			);
@@ -143,6 +178,7 @@
 				FAA3BFB8212174E500C82A37 /* LaunchScreen.storyboard in Resources */,
 				FAA3BFB5212174E500C82A37 /* Assets.xcassets in Resources */,
 				FAA3BFB3212174E300C82A37 /* Main.storyboard in Resources */,
+				FA010D012124087700379B5A /* SceneKit Asset.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +190,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA3BFC02121770D00C82A37 /* JumpViewController.swift in Sources */,
+				FA010CF52123FFB700379B5A /* UIViewController+Extension.swift in Sources */,
+				FA010CF9212400B200379B5A /* JumpHelper.swift in Sources */,
+				FA010CFB212400F700379B5A /* BottleNode.swift in Sources */,
+				FA010CFF2124085800379B5A /* ModelViewController.swift in Sources */,
+				FA010CFD2124012900379B5A /* BubbleTextNode.swift in Sources */,
 				FA010CEC2123B32800379B5A /* DropPlaneViewController.swift in Sources */,
+				FA010CF72123FFEC00379B5A /* SCNVector3+Extension.swift in Sources */,
+				FA010CF32123FF6000379B5A /* SCNNode+Extension.swift in Sources */,
 				FAC43176212263C7006878B9 /* CubeViewController.swift in Sources */,
+				FA010CF12123FF3200379B5A /* UIColor+Extension.swift in Sources */,
 				FAA3BFB0212174E300C82A37 /* ViewController.swift in Sources */,
 				FAA3BFAE212174E300C82A37 /* AppDelegate.swift in Sources */,
 				FAC70BC02122797A0066B3B9 /* Plane.swift in Sources */,
