@@ -114,7 +114,7 @@ extension DropPlaneViewController {
         // 轻点一下就会往场景中插入新的几何体
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self,
-            action: #selector(DropPlaneViewController.handleTapFrom(recognizer:) ))
+            action: #selector(handleTapFrom(recognizer:)))
         tapGestureRecognizer.numberOfTapsRequired = 1
         sceneView.addGestureRecognizer(tapGestureRecognizer)
     }
@@ -150,7 +150,7 @@ extension DropPlaneViewController: ARSCNViewDelegate {
         }
         
         // 检测到新平面时创建 SceneKit 平面以实现 3D 视觉化
-        let plane = DropPlane(withAnchor: anchor, isHidden: true)
+        let plane = DropPlane(withAnchor: anchor, isHidden: false)
         planes[anchor.identifier] = plane
         node.addChildNode(plane)
     }
