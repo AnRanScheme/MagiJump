@@ -65,13 +65,24 @@ extension DropPlaneViewController {
         let dimension: CGFloat = 0.1
         let cube = SCNBox(width: dimension, height: dimension, length: dimension, chamferRadius: 0)
         let node = SCNNode(geometry: cube)
-        
+        /*
+         dynamic: 可以被碰撞、力影响。适合场景中物理引擎可以完全接管的类型，如掉落的石块。
+         static: 不受碰撞、力影响，且不能移动。适合场景中地面、墙体等。
+         kinematic: 不受碰撞、力影响，但移动的时候会影响其他body。适合场景中的角色，毕竟我们不想角色的移动不想被太多力影响。
+         */
         // physicsBody 会让 SceneKit 用物理引擎控制该几何体
         node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         
         node.physicsBody?.mass = 2
         node.physicsBody?.categoryBitMask = CollisionCategory.cube.rawValue
-        
+        /*一个场景中会有许多node，需要给他们设置category，让我们只关注感兴趣的碰撞、接触。尤其要注意的是它们各自的默认值，不然很容易出现bug。
+         categoryBitMask:
+         指定body的类型， dynamic/kinematic body默认为1，static body默认为2。
+         collisionBitMask:
+         指定能与该body产生碰撞的physics body类型。默认是-1，即每位都置1。
+         contactTestBitMask:
+         指定哪种类型的physics body与该body发生接触（几何体交叉）后，通知给physics world。
+        。*/
         // 把几何体插在用户点击的点再稍高一点的位置，以便使用物理引擎来掉落到平面上
         let insertionYOffset: Float = 0.5
         node.position = SCNVector3Make(hitResult.worldTransform.columns.3.x, hitResult.worldTransform.columns.3.y + insertionYOffset, hitResult.worldTransform.columns.3.z)

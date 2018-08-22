@@ -208,7 +208,7 @@ extension JumpViewController: ARSCNViewDelegate, ARSessionDelegate {
             light.color = UIColor(white: 1.0, alpha: 1.0)
             light.shadowColor = UIColor(white: 0.0, alpha: 0.8).cgColor
             let lightNode = SCNNode()
-            lightNode.eulerAngles = SCNVector3Make(-.pi / 3, .pi / 4, 0)
+            lightNode.eulerAngles = SCNVector3Make(-.pi/3, .pi/4, 0)
             lightNode.light = light
             sceneView.scene.rootNode.addChildNode(lightNode)
             

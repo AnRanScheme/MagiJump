@@ -14,7 +14,7 @@ import SceneKit
 class PlaneViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
-    var planes = [UUID:Plane]() // 字典，存储场景中当前渲染的所有平面
+    var planes = [UUID: Plane]() // 字典，存储场景中当前渲染的所有平面
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

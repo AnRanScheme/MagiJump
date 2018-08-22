@@ -43,10 +43,14 @@ extension CubeViewController {
         let scene = SCNScene()
         // 想要绘制的 3D 立方体
         let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.0)
+        let metarl = SCNMaterial()
+        metarl.diffuse.contents = UIColor.blue
+        boxGeometry.materials = [metarl]
         // 将几何体包装为 node 以便添加到 scene
         let boxNode = SCNNode(geometry: boxGeometry)
         // 把 box 放在摄像头正前方
         boxNode.position = SCNVector3Make(0, 0, -0.5)
+      
         // rootNode 是一个特殊的 node，它是所有 node 的起始点
         scene.rootNode.addChildNode(boxNode)
         // 将 scene 赋给 view
