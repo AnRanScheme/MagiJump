@@ -29,7 +29,7 @@ class Scene: SKScene {
         remainingDoraNode.fontSize = 25
         remainingDoraNode.fontName = "BradleyHandITCTT-Bold"
         remainingDoraNode.color = .red
-        remainingDoraNode.position = CGPoint(x: 0, y: view.frame.midY - 50)
+        remainingDoraNode.position = CGPoint(x: 0, y: 100)
         
         // 2. Add the node into the scene
         addChild(remainingDoraNode)
@@ -38,14 +38,14 @@ class Scene: SKScene {
         doraRemains = 0
         
         // 4. Create a timer to generate Dora
-        doraGeneTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {
+        doraGeneTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
             timer in
             self.generateDora()
         }
     }
     
     func generateDora() {
-        if doraCreated == 2 {
+        if doraCreated == 20 {
             doraGeneTimer?.invalidate()
             doraGeneTimer = nil
             
@@ -92,6 +92,7 @@ class Scene: SKScene {
         let hittedDora = nodes(at: location)
         
         if let dora = hittedDora.first {
+            if dora is SKLabelNode { return }
             // 1. Fadeout Doraemon
             let scaleOut = SKAction.scale(by: 2, duration: 0.2)
             let fadeOut = SKAction.fadeOut(withDuration: 0.2)
