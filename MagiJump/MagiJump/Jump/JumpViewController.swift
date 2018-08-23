@@ -45,9 +45,9 @@ class JumpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         sceneView.delegate = self
         sceneView.session.delegate = self
+        // 显示FPS等测试信息
         sceneView.showsStatistics = false
     }
     
@@ -107,12 +107,14 @@ class JumpViewController: UIViewController {
             
             let location = touches.first?.location(in: sceneView)
             if let position = anyPositionFrom(location: location!) {
+                // 每次创建两个
                 generateBox(at: position)
                 addConeNode()
                 generateBox(at: boxNodes.last!.position)
             }
         } else {
             if !maskTouch {
+                // 取反  // Swift 4.2新特性
                 maskTouch.toggle()
             }
             touchTimePair.begin = (event?.timestamp)!
@@ -126,7 +128,7 @@ class JumpViewController: UIViewController {
         
         if maskTouch {
             maskTouch.toggle()
-            
+           // maskTouch = !maskTouch
             touchTimePair.end = (event?.timestamp)!
             
             let distance = distanceCalculateClosure(touchTimePair.end - touchTimePair.begin)
@@ -134,6 +136,7 @@ class JumpViewController: UIViewController {
             if nextDirection == .left {
                 let moveAction1 = SCNAction.moveBy(x: distance, y: kJumpHeight, z: 0, duration: kMoveDuration)
                 let moveAction2 = SCNAction.moveBy(x: distance, y: -kJumpHeight, z: 0, duration: kMoveDuration)
+                // rotateBy旋转的动画
                 actions = [SCNAction.rotateBy(x: 0, y: 0, z: -.pi * 2, duration: kMoveDuration * 2),
                            SCNAction.sequence([moveAction1, moveAction2])]
             } else {
@@ -142,31 +145,34 @@ class JumpViewController: UIViewController {
                 actions = [SCNAction.rotateBy(x: .pi * 2, y: 0, z: 0, duration: kMoveDuration * 2),
                            SCNAction.sequence([moveAction1, moveAction2])]
             }
-            
+            // 重置
             bottleNode.recover()
             bottleNode.runAction(SCNAction.group(actions), completionHandler: { [weak self] in
-                let boxNode = (self?.boxNodes.last!)!
-                if (self?.bottleNode.isNotContainedXZ(in: boxNode))! {
-                    JumpHelper.shared.setHighestScore(Int((self?.score)!))
+                
+                guard let `self` = self else {return}
+                let boxNode = self.boxNodes.last!
+                // 判断是否在方块里面
+                if self.bottleNode.isNotContainedXZ(in: boxNode) {
+                    JumpHelper.shared.setHighestScore(Int(self.score))
                     
-                    self?.alert(message: "You Lose!\n\nScore: \((self?.score)!)\n\nHighest: \(JumpHelper.shared.getHighestScore())")
+                    self.alert(message: "You Lose!\n\nScore: \(self.score)\n\nHighest: \(JumpHelper.shared.getHighestScore())")
                     
-                    self?.restartGame()
+                    self.restartGame()
                 } else {
-                    self?.score += 1
+                    self.score += 1
                     
                     var scorePosition: SCNVector3 = SCNVector3()
                     scorePosition = SCNVector3(x: 0, y: 0.2, z: 0)
                     let scoreNode = BubbleTextNode(text: "+1", at: scorePosition)
                     scoreNode.position = scorePosition
-                    self?.bottleNode.addChildNode(scoreNode)
+                    self.bottleNode.addChildNode(scoreNode)
                     
                     let action = SCNAction.move(by: SCNVector3(0, 0.2, 0), duration: 0.75)
                     scoreNode.runAction(action, completionHandler: {
                         scoreNode.removeFromParentNode()
                     })
                     
-                    self?.generateBox(at: (self?.boxNodes.last!.position)!)
+                    self.generateBox(at: self.boxNodes.last!.position)
                 }
             })
         }
@@ -185,9 +191,13 @@ class JumpViewController: UIViewController {
             nextDirection = NextDirection(rawValue: Int.random(in: 0...1))!
             let deltaDistance = Double.random(in: 0.25...0.5)
             if nextDirection == .left {
-                node.position = SCNVector3(realPosition.x + Float(deltaDistance), realPosition.y, realPosition.z)
+                node.position = SCNVector3(realPosition.x + Float(deltaDistance),
+                                           realPosition.y,
+                                           realPosition.z)
             } else {
-                node.position = SCNVector3(realPosition.x, realPosition.y, realPosition.z + Float(deltaDistance))
+                node.position = SCNVector3(realPosition.x,
+                                           realPosition.y,
+                                           realPosition.z + Float(deltaDistance))
             }
         }
         
@@ -211,7 +221,7 @@ extension JumpViewController: ARSCNViewDelegate, ARSessionDelegate {
             lightNode.eulerAngles = SCNVector3Make(-.pi/3, .pi/4, 0)
             lightNode.light = light
             sceneView.scene.rootNode.addChildNode(lightNode)
-            
+
             let ambientLight = SCNLight()
             ambientLight.type = .ambient
             ambientLight.color = UIColor(white: 0.8, alpha: 1.0)
@@ -219,7 +229,7 @@ extension JumpViewController: ARSCNViewDelegate, ARSessionDelegate {
             ambientNode.light = ambientLight
             sceneView.scene.rootNode.addChildNode(ambientNode)
             
-            alert(message: "Touch anywhere to begin")
+            alert(message: "点击屏幕添加跳跃点")
         }
     }
     

@@ -9,6 +9,9 @@
 import UIKit
 import SceneKit
 
+
+
+/// 跳转的n节点
 class BottleNode: SCNNode {
     
     private let minimumHeight           : CGFloat = 0.15
@@ -25,12 +28,14 @@ class BottleNode: SCNNode {
         return material
     }()
     
+    /// SCNSphere表示具有可控半径的球体
     lazy var sphereNode: SCNNode = {
         let sphere = SCNSphere(radius: 0.02)
         sphere.materials = [myMaterial]
         return SCNNode(geometry: sphere)
     }()
     
+    /// 创建并返回给定顶部半径，底部半径和高度的圆锥体。
     lazy var coneNode: SCNNode = {
         let cone = SCNCone(topRadius: 0.0, bottomRadius: 0.05, height: coneNodeHeight)
         cone.materials = [myMaterial]
@@ -49,6 +54,7 @@ class BottleNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // 提供对外方法修改高度
     func scaleHeight() {
         if !maskPosition {
             positionY = position.y

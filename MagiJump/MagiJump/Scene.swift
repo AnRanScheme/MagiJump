@@ -18,7 +18,7 @@ class Scene: SKScene {
     var doraCreated = 0
     var doraRemains = 0 {
         didSet {
-            remainingDoraNode.text = "\(doraRemains) Dora left in your room"
+            remainingDoraNode.text = "\(doraRemains)个Dora离开了你的房间"
         }
     }
     

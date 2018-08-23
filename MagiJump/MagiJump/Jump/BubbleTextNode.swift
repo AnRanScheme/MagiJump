@@ -15,20 +15,24 @@ class BubbleTextNode: SCNNode {
     
     init(text: String, at position: SCNVector3) {
         super.init()
-        
+        /*您可以使用广告牌约束来使用二维精灵图像而不是三维几何图形高效渲染场景的一部分
+         - 通过将精灵映射到受广告牌约束影响的平面上，精灵保持其相对于查看者的方向。
+         要将约束附加到SCNNode对象，请使用其constraints属性。*/
         let billboardConstraint = SCNBillboardConstraint()
         billboardConstraint.freeAxes = SCNBillboardAxis.Y
         
-        // Lights
+        // Lights 灯光 可以使显示更加逼真
+        
+        // 又图片可以展示
         let omniBackLight = SCNLight()
-        omniBackLight.type = .omni
+        omniBackLight.type = .spot
         omniBackLight.color = UIColor.white
         let omniBackLightNode = SCNNode()
         omniBackLightNode.light = omniBackLight
         omniBackLightNode.position = SCNVector3(position.x - 2, 0, position.z - 2)
         
         let omniFrontLight = SCNLight()
-        omniFrontLight.type = .omni
+        omniFrontLight.type = .spot
         omniFrontLight.color = UIColor.white
         let omniFrontLightNode = SCNNode()
         omniFrontLightNode.light = omniFrontLight
@@ -41,8 +45,8 @@ class BubbleTextNode: SCNNode {
         let bubble = SCNText(string: text, extrusionDepth: CGFloat(bubbleDepth / 5.0))
         bubble.font = UIFont(name: "HelveticaNeue", size: 0.18)
         bubble.alignmentMode = convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center)
-        bubble.firstMaterial?.diffuse.contents = UIColor.white
-        bubble.firstMaterial?.specular.contents = UIColor.white
+        bubble.firstMaterial?.diffuse.contents = UIColor.red
+        bubble.firstMaterial?.specular.contents = UIColor.red
         bubble.firstMaterial?.isDoubleSided = false
         bubble.flatness = 0.01 // setting this too low can cause crashes.
         bubble.chamferRadius = 0.05
