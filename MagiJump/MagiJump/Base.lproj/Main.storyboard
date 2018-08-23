@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxA-BT-chq">
-                                <rect key="frame" x="159" y="186" width="57" height="30"/>
+                                <rect key="frame" x="159" y="88.5" width="57" height="30"/>
                                 <state key="normal" title="hello AR"/>
                                 <connections>
                                     <segue destination="hFj-lV-ksZ" kind="push" id="ixX-nI-oWQ"/>
@@ -46,14 +46,25 @@
                                     <segue destination="BTn-2V-wNI" kind="push" id="QCg-HY-9uf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYA-Mo-Mex">
+                                <rect key="frame" x="144" y="218.5" width="87" height="34"/>
+                                <state key="normal" title="SpriteView">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2KD-dd-FLk" kind="push" id="phA-Fq-1rm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lxA-BT-chq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6LP-4l-OL0"/>
                             <constraint firstItem="BrD-O8-9Jv" firstAttribute="top" secondItem="2nR-DN-MlC" secondAttribute="bottom" constant="90.5" id="E7U-Ci-yse"/>
                             <constraint firstItem="DbW-1e-t44" firstAttribute="top" secondItem="BrD-O8-9Jv" secondAttribute="bottom" constant="74" id="Ere-ss-kz0"/>
-                            <constraint firstItem="2nR-DN-MlC" firstAttribute="top" secondItem="lxA-BT-chq" secondAttribute="bottom" constant="102.5" id="RN2-Vl-jZY"/>
+                            <constraint firstItem="2nR-DN-MlC" firstAttribute="top" secondItem="lxA-BT-chq" secondAttribute="bottom" constant="200" id="RN2-Vl-jZY"/>
+                            <constraint firstItem="GYA-Mo-Mex" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zoi-YT-1z2"/>
                             <constraint firstItem="2nR-DN-MlC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY6-Lf-xdn"/>
+                            <constraint firstItem="2nR-DN-MlC" firstAttribute="top" secondItem="GYA-Mo-Mex" secondAttribute="bottom" constant="66" id="moS-Di-DgE"/>
                             <constraint firstItem="BrD-O8-9Jv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqL-rc-vAT"/>
                             <constraint firstItem="2nR-DN-MlC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pib-Wn-udi"/>
                             <constraint firstItem="DbW-1e-t44" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v3Y-a5-461"/>
@@ -70,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="-548"/>
+            <point key="canvasLocation" x="877.60000000000002" y="-548.27586206896558"/>
         </scene>
         <!--Jump View Controller-->
         <scene sceneID="lMI-QC-uhM">
@@ -206,6 +217,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5D-2G-OPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781.5" y="212.5"/>
+        </scene>
+        <!--Sprite View Controller-->
+        <scene sceneID="m3G-ds-EkB">
+            <objects>
+                <viewController id="2KD-dd-FLk" customClass="SpriteViewController" customModule="MagiJump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fVQ-Xo-Ynn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjX-Q2-fsj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arskView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lH1-8V-Jsw" firstAttribute="trailing" secondItem="tjX-Q2-fsj" secondAttribute="trailing" id="6gh-Mn-0q3"/>
+                            <constraint firstItem="tjX-Q2-fsj" firstAttribute="leading" secondItem="lH1-8V-Jsw" secondAttribute="leading" id="F9S-bg-Yje"/>
+                            <constraint firstItem="lH1-8V-Jsw" firstAttribute="bottom" secondItem="tjX-Q2-fsj" secondAttribute="bottom" id="dJE-QH-MMy"/>
+                            <constraint firstItem="tjX-Q2-fsj" firstAttribute="top" secondItem="lH1-8V-Jsw" secondAttribute="top" id="gu8-EX-XbZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lH1-8V-Jsw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PCB-dv-6s6"/>
+                    <connections>
+                        <outlet property="sceneView" destination="tjX-Q2-fsj" id="jER-2N-oGR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XaQ-y0-fYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="212"/>
         </scene>
         <!--Plane View Controller-->
         <scene sceneID="Zgi-NM-F3V">

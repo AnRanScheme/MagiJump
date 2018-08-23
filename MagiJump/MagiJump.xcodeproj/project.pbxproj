@@ -24,6 +24,9 @@
 		FAA3BFB5212174E500C82A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA3BFB4212174E500C82A37 /* Assets.xcassets */; };
 		FAA3BFB8212174E500C82A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3BFB6212174E500C82A37 /* LaunchScreen.storyboard */; };
 		FAA3BFC02121770D00C82A37 /* JumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3BFBF2121770D00C82A37 /* JumpViewController.swift */; };
+		FAA72FD6212E608D000687C1 /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA72FD5212E608D000687C1 /* SpriteViewController.swift */; };
+		FAA72FD9212E656D000687C1 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAA72FD7212E656D000687C1 /* Scene.sks */; };
+		FAA72FDA212E656D000687C1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA72FD8212E656D000687C1 /* Scene.swift */; };
 		FAC43176212263C7006878B9 /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43175212263C7006878B9 /* CubeViewController.swift */; };
 		FAC70BBE212278A90066B3B9 /* PlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC70BBD212278A90066B3B9 /* PlaneViewController.swift */; };
 		FAC70BC02122797A0066B3B9 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC70BBF2122797A0066B3B9 /* Plane.swift */; };
@@ -49,6 +52,9 @@
 		FAA3BFB7212174E500C82A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3BFB9212174E500C82A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA3BFBF2121770D00C82A37 /* JumpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpViewController.swift; sourceTree = "<group>"; };
+		FAA72FD5212E608D000687C1 /* SpriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
+		FAA72FD7212E656D000687C1 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		FAA72FD8212E656D000687C1 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FAC43175212263C7006878B9 /* CubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
 		FAC70BBD212278A90066B3B9 /* PlaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneViewController.swift; sourceTree = "<group>"; };
 		FAC70BBF2122797A0066B3B9 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				FA010CEB2123B32800379B5A /* DropPlaneViewController.swift */,
 				FA010CED2123B35800379B5A /* DropPlane.swift */,
 				FA010CFE2124085800379B5A /* ModelViewController.swift */,
+				FAA72FD5212E608D000687C1 /* SpriteViewController.swift */,
+				FAA72FD7212E656D000687C1 /* Scene.sks */,
+				FAA72FD8212E656D000687C1 /* Scene.swift */,
 				FAA3BFB1212174E300C82A37 /* Main.storyboard */,
 				FAA3BFB4212174E500C82A37 /* Assets.xcassets */,
 				FA010D002124087700379B5A /* SceneKit Asset.scnassets */,
@@ -179,6 +188,7 @@
 				FAA3BFB5212174E500C82A37 /* Assets.xcassets in Resources */,
 				FAA3BFB3212174E300C82A37 /* Main.storyboard in Resources */,
 				FA010D012124087700379B5A /* SceneKit Asset.scnassets in Resources */,
+				FAA72FD9212E656D000687C1 /* Scene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +206,8 @@
 				FA010CFF2124085800379B5A /* ModelViewController.swift in Sources */,
 				FA010CFD2124012900379B5A /* BubbleTextNode.swift in Sources */,
 				FA010CEC2123B32800379B5A /* DropPlaneViewController.swift in Sources */,
+				FAA72FD6212E608D000687C1 /* SpriteViewController.swift in Sources */,
+				FAA72FDA212E656D000687C1 /* Scene.swift in Sources */,
 				FA010CF72123FFEC00379B5A /* SCNVector3+Extension.swift in Sources */,
 				FA010CF32123FF6000379B5A /* SCNNode+Extension.swift in Sources */,
 				FAC43176212263C7006878B9 /* CubeViewController.swift in Sources */,
