@@ -14,10 +14,10 @@ extension SCNNode {
     func isNotContainedXZ(in boxNode: SCNNode) -> Bool {
         let box = boxNode.geometry as! SCNBox
         let width = Float(box.width)
-        if fabs(position.x - boxNode.position.x) > width / 2.0 {
+        if abs(position.x - boxNode.position.x) > width / 2.0 {
             return true
         }
-        if fabs(position.z - boxNode.position.z) > width / 2.0 {
+        if abs(position.z - boxNode.position.z) > width / 2.0 {
             return true
         }
         return false
